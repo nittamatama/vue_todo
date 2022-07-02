@@ -5,7 +5,8 @@ const app = Vue.createApp({
   }),
   methods: {
     addItem: function(event) {
-      console.log('Clicked')
+      // console.log('Clicked')
+      if(this.newItem === '') return
       let todo = {
         item: this.newItem
       }
