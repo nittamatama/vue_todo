@@ -1,15 +1,10 @@
 const app = Vue.createApp({
   data: () => ({
-
+    message: 'hellovue'
   }),
-  computed: {
-    computedNumber: function () {
-      return Math.random()
-    }
-  },
-  methods: {
-    methodsNumber: function () {
-      return Math.random()
+  watch: {
+    message: function (newValue, oldValue) {
+      console.log('new: %s, old: %s', newValue, oldValue)
     }
   }
 })
