@@ -6,6 +6,11 @@ const app = Vue.createApp({
     reversedMessage: function () {
       return this.message.split('').reverse().join('')
     }
+  },
+  methods: {
+    reversedMessagemethod: function () {
+      return this.message.split('').reverse().join('')
+    }
   }
 })
 app.mount('#app')
