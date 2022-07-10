@@ -1,22 +1,36 @@
 const app = Vue.createApp({
   data: () => ({
-    colors: [
-      { name: 'Red' },
-      { name: 'Green' },
-      { name: 'Blue' }
-    ]
+    items: null,
+    keyword: '',
+    message: ''
   }),
   watch: {
-    colors: {
-      handler: function (newValue, oldValue) {
-        console.log('Updated')
-      },
-      deep: true
-    }
+  },
+  mounted: function() {
+    this.keyword = 'javascript'
+    this.getAnswer()
   },
   methods: {
-    onClick: function (event) {
-      this.colors[1].name = 'White'
+    getAnswer: function () {
+      if(this.keyword === '') {
+        console.log('karamoji')
+        this.items = null
+        return
+      }
+
+      this.message = 'Loading...'
+      const vm = this
+      const params = { page: 1, per_page: 20, query: this.keyword }
+      axios.get('https://qiita.com/api/v2/items', { params }).
+            then(function (response) {
+              vm.items = response.data
+            }).
+            catch(function (error) {
+              vm.message = 'Error' + error
+            }).
+            finally(function () {
+            vm.message = ''
+            })
     }
   }
 })
