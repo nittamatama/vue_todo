@@ -5,10 +5,16 @@ const app = Vue.createApp({
     message: ''
   }),
   watch: {
+    keyword: function (newKeyword, oldKeyword) {
+      console.log(newKeyword)
+      this.debouncedGetAnswer()
+    }
   },
   mounted: function() {
-    this.keyword = 'javascript'
-    this.getAnswer()
+    // this.keyword = 'javascript'
+    // this.getAnswer()
+    this.message = 'waiting for typing'
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 1000)
   },
   methods: {
     getAnswer: function () {
