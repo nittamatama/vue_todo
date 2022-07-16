@@ -9,10 +9,7 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:click.once="clickHandler">
-      now
-    </button>
-    <p> {{ message }}</p>
+    <input type="text" v-model="message" value="hoge">
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>

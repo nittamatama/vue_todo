@@ -1,11 +1,6 @@
 const app = Vue.createApp({
   data: () => ({
-    message: ''
+    message: 'hello vue'
   }),
-  methods: {
-    clickHandler: function () {
-      this.message = new Date().toLocaleTimeString()
-    }
-  }
 })
 app.mount('#app')
