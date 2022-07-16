@@ -9,9 +9,13 @@
 </head>
 <body>
   <div id="app">
-    <p> {{ message }}</p>
-    <!-- <textarea> {{ message }}</textarea> -->
-    <textarea v-model="message"></textarea>
+    <label for="red">Red</label>
+    <input type="checkbox" id="red" value="Red" v-model="colors">
+    <label for="red">Green</label>
+    <input type="checkbox" id="green" value="Green" v-model="colors">
+    <label for="red">Blue</label>
+    <input type="checkbox" id="blue" value="blue" v-model="colors">
+    <p>{{ colors }}</p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
