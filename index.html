@@ -9,18 +9,7 @@
 </head>
 <body>
   <div id="app">
-    <p v-if="color === 'red'">
-      Stop
-    </p>
-    <p v-else-if="color === 'yellow'">
-      Caution
-    </p>
-    <p v-else-if="color === 'blue'">
-      Go
-    </p>
-    <p v-else>
-      not red
-    </p>
+    <p v-show="toggle">hello</p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
