@@ -9,8 +9,8 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:click="clickHandler($event, 'vuejs')">
-      click
+    <button v-on:click.once="clickHandler">
+      now
     </button>
     <p> {{ message }}</p>
   </div>
