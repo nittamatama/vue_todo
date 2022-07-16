@@ -9,8 +9,11 @@
 </head>
 <body>
   <div id="app">
-    <p>hello
-      <span v-bind:style="{ color: color, fontSize: fontSize + 'px' }">vue</span>
+    <p v-if="toggle">
+      YES
+    </p>
+    <p v-else>
+      NO
     </p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>

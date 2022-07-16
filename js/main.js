@@ -1,7 +1,6 @@
 const app = Vue.createApp({
   data: () => ({
-    color: 'blue',
-    fontSize: 36
+    toggle: false
   })
 })
 app.mount('#app')
