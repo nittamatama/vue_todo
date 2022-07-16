@@ -9,10 +9,10 @@
 </head>
 <body>
   <div id="app">
-    <p>
-      {{ counter }}
-    </p>
-    <button v-on:click="clickHandler" id="btn">click2</button>
+    <button v-on:click="clickHandler('vuejs')">
+      click
+    </button>
+    <p> {{ message }}</p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
