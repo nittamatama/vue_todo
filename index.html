@@ -9,14 +9,13 @@
 </head>
 <body>
   <div id="app">
-    <input type="radio" id="red" value="Red" v-model="color">
-    <label for="red">Red</label>
-    <input type="radio" id="blue" value="blue" v-model="color">
-    <label for="red">blue</label>
-    <input type="radio" id="green" value="green" v-model="color">
-    <label for="red">Green</label>
-    <p>{{ color }}
-    </p>
+    <select v-model="selected">
+      <option disabled>please select one</option>
+      <option value="">red</option>
+      <option>blue</option>
+      <option>green</option>
+    </select>
+    <p>{{ selected }}</p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
