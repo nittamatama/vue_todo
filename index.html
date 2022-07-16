@@ -9,11 +9,17 @@
 </head>
 <body>
   <div id="app">
-    <p v-if="toggle">
-      YES
+    <p v-if="color === 'red'">
+      Stop
+    </p>
+    <p v-else-if="color === 'yellow'">
+      Caution
+    </p>
+    <p v-else-if="color === 'blue'">
+      Go
     </p>
     <p v-else>
-      NO
+      not red
     </p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
