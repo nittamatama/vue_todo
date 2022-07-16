@@ -9,13 +9,8 @@
 </head>
 <body>
   <div id="app">
-    <select v-model="selected">
-      <option disabled>please select one</option>
-      <option value="">red</option>
-      <option>blue</option>
-      <option>green</option>
-    </select>
-    <p>{{ selected }}</p>
+    <input type="text" v-model.lazy="message">
+    <p>{{ message }}</p>
   </div>
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
